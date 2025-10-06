@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="283dp"
+        android:layout_height="315dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Логотип приложения"
+        android:src="@drawable/photo" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добро пожаловать"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:letterSpacing="0.02"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Какой-то текст"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:alpha="0.9"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Вход"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_outline_background"
+        android:textColor="#764BA2"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Регистрация"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_filled_background"
+        android:textColor="@color/white"
+        android:layout_marginBottom="32dp" />
+
+</LinearLayout>

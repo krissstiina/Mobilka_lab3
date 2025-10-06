@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardFragment">
+
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="com.example.application.fragments.OnboardFragment"
+        android:label="Добро пожаловать"
+        tools:layout="@layout/fragment_onboard">
+
+        <action
+            android:id="@+id/action_onboardFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+
+        <action
+            android:id="@+id/action_onboardFragment_to_registrFragment"
+            app:destination="@id/registrFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.application.fragments.SignInFragment"
+        android:label="Вход в аккаунт"
+        tools:layout="@layout/fragment_sign_in">
+
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue=""
+            app:nullable="true" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue=""
+            app:nullable="true" />
+        <argument
+            android:name="lastName"
+            app:argType="string"
+            android:defaultValue=""
+            app:nullable="true" />
+        <argument
+            android:name="age"
+            app:argType="string"
+            android:defaultValue=""
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_signInFragment_to_registrFragment"
+            app:destination="@id/registrFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrFragment"
+        android:name="com.example.application.fragments.RegistrFragment"
+        android:label="Регистрация"
+        tools:layout="@layout/fragment_registr">
+
+        <action
+            android:id="@+id/action_registrFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.application.fragments.HomeFragment"
+        android:label="Главная"
+        tools:layout="@layout/fragment_home" />
+
+</navigation>
